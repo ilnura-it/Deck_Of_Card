@@ -21,10 +21,12 @@ class Deck:
       return f"Deck of {self.cards} cards"
    
    def _deal(self, num):
-      if len(self.cards) == 0:
+      count = self.count()
+      if count == 0:
          raise ValueError("All cards have been dealt")
          
-      new_deck = self.cards[:-num]
+      new_deck = self.cards[-num:]
+      self.cards = self.cards[:-num]
       return new_deck
    
    def count(self):
@@ -37,7 +39,7 @@ class Deck:
          raise ValueError("Only full decks can be shuffled")
    
    def deal_card(self):
-      return self.cards.pop(0)
+      return self._deal(1)[0]
 
    def deal_hand(self, num):
       hand = [self.cards.pop(0) for _ in range(num)]
