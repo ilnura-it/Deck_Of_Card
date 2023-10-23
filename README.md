@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The goal in this exercise is to implement two classes, **Card**  and **Deck** .
+The goal in this exercise is to implement OOP and two classes, **Card**  and **Deck** .
 
 ### Specifications
 
