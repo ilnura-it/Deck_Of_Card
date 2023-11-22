@@ -18,7 +18,7 @@ class Deck:
       self.cards = [Card(suit, value) for suit in card_suits for value in card_values]
       
    def __repr__(self):
-      return f"Deck of {self.cards} cards"
+      return f"Deck of {self.count()} cards"
    
    def _deal(self, num):
       count = self.count()
